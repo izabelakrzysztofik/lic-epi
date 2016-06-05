@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+    <%= @college_level.subject.each do |subject| %>
+    <%= link_to subject.subject_name, subjects_path(@subjects)%>
+
+    <% end %>

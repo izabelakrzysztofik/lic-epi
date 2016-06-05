@@ -1,0 +1,5 @@
+class AddIndexSubjectsOnCollegeLevelId < ActiveRecord::Migration
+  def change
+  add_index :subjects, :college_level_id
+  end
+end

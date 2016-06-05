@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>College level:</strong>
+  <%= @college_level.college_level_name%>
+</p>
+
+<%= link_to 'Edit', edit_college_level_path(@college_level) %> |
+<%= link_to 'Back', college_levels_path %>

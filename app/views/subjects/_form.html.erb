@@ -1,0 +1,40 @@
+<%= form_for(@subject) do |f| %>
+  <% if @subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+      <% @subject.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+      <form class="col s6">
+        <div class="row">
+  <div class="input-field col s4 offset-s4">
+    <%= f.label :subject_name %><br>
+    <%= f.text_field :subject_name %>
+  </div>
+
+  <div class="input-field multiple col s4 offset-s4">
+    <%= f.label :college_level %><br>
+    <%= f.select :college_level_id, options_for_select(CollegeLevel.all.map{|cl|[cl.full_name, cl.id]}), {},  class: "browser-default" %>
+  </div>
+  <div class="input-field col s4 offset-s4">
+    <legend>Typ</legend>
+    <%= f.text_field :type_id, class: "browser-default"%>
+  </div>
+
+  <div class="input-field col s4 offset-s4">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>
+</div>
+<% end %>
