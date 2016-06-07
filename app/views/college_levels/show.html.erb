@@ -5,5 +5,12 @@
   <%= @college_level.college_level_name%>
 </p>
 
+
+    <%= @college_level.subject.each do |subject| %>
+    <%= link_to subject.subject_name, subjects_path(@subjects)%>
+
+    <% end %>
+
+
 <%= link_to 'Edit', edit_college_level_path(@college_level) %> |
 <%= link_to 'Back', college_levels_path %>

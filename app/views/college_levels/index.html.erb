@@ -1,6 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-    <%= @college_level.subject.each do |subject| %>
-    <%= link_to subject.subject_name, subjects_path(@subjects)%>
+    <p id="notice"><%= notice %></p>
 
-    <% end %>
+    <h1>Listing Years</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Level name</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @college_levels.each do |college_level| %>
+          <tr>
+            <td><%= college_level.college_level_name %></td>
+            <td><%= link_to 'Show', college_level %></td>
+            <td><%= link_to 'Edit', edit_college_level_path(college_level) %></td>
+            <td><%= link_to 'Destroy', college_level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>

@@ -6,7 +6,6 @@ class CollegeLevelsController < ApplicationController
   def index
     @college_levels = CollegeLevel.all
 
-   @subject = Subject.all
   end
 
   # GET /college_levels/1
@@ -68,10 +67,6 @@ class CollegeLevelsController < ApplicationController
     def set_college_level
       @college_level = CollegeLevel.all
     end
-    def set_subjects
-      @degrees = Subject.find(params[:id])
-    end
-
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def college_level_params

@@ -1,6 +1,7 @@
-
-      <div class="col s6">
+      <div class="button-div">
+      <div class="col s8">
       <% @degrees.each do |degree| %>
-      <%= link_to degree.degree_name, degree %>
+      <%= link_to degree.degree_name, degree, :class => "waves-effect waves-light grey btn-large" %>
       <% end %>
+      </div>
       </div>

@@ -6,7 +6,7 @@
 </p>
 
 <% @degree.college_levels.each do |level| %>
-<%= link_to level.college_level_name, college_levels_path(@college_level)%>
+<%= link_to level.college_level_name, subjects_path(@subject), :class => "waves-effect waves-light grey btn-large"%>
 
 <% end %>
 

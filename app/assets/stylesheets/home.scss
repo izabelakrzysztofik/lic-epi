@@ -4,7 +4,14 @@
 
 
 #logo {
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
-    background: url('logo5.png');
+    background: url('logo7.png') no-repeat scroll;
+    padding: 10px 0 0 0;
+}
+.btn, .btn-large {
+    background: url('pusty.png') no-repeat center center scroll;
+}
+.button-div {
+  padding: 300px 0px 10px 100px;
 }
