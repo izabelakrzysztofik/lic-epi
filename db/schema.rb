@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605122541) do
+ActiveRecord::Schema.define(version: 20160607091648) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -36,11 +36,9 @@ ActiveRecord::Schema.define(version: 20160605122541) do
     t.datetime "updated_at",         null: false
     t.string   "college_level_name"
     t.integer  "degree_id"
-    t.integer  "subject_id"
   end
 
   add_index "college_levels", ["degree_id"], name: "index_college_levels_on_degree_id"
-  add_index "college_levels", ["subject_id"], name: "index_college_levels_on_subject_id"
 
   create_table "degrees", force: :cascade do |t|
     t.string   "degree_name"
