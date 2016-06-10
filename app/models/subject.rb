@@ -5,4 +5,7 @@ class Subject < ActiveRecord::Base
 
   validates_presence_of :subject_name
   validates_presence_of :description
+  validates_presence_of :type_id
+  validates_presence_of :college_level_id
+  
 end

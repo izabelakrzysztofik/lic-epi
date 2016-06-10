@@ -17,7 +17,6 @@
 @import "materialize/components/color";
 @import "materialize/extras/nouislider";
 
-html,
 /* Menu */
 nav {
   background: #f68d3c !important;
@@ -76,6 +75,62 @@ nav ul a {
     color: #000;
   }
 
+
+/* Logo*/
+#logo {
+    background-position: top center;
+    background-size: cover;
+    background: url('logo10.png') no-repeat scroll;
+    padding: 10px 0 0 0;
+}
+
+/* Buttons */
+.btn, .btn-large {
+    background: url('pusty.png') no-repeat center center scroll;
+    border-radius: 6px;
+    text-transform: none;
+    color: #000;
+}
+a.btn:visited,
+a.btn-large:visited {
+  color: #000;
+}
+a.btn:hover,
+a.btn-large:hover {
+  color: #c3c3c3;
+}
+.position-button {
+  margin-left: 35px;
+}
+#logo > div > div > a.waves-effect.waves-light.grey.btn-large {
+  border: 1px ridge #bfbfbf;
+  padding: 10px 10px 10px 40px;
+}
+#logo > div > div > div > div > a {
+    border: 1px ridge #bfbfbf;
+    padding: 10px 10px 10px 40px;
+}
+.button-div {
+  padding: 150px 0px 10px 100px;
+}
+.enter {
+  width: 132px;
+  text-align: right;
+  position: fixed;
+  bottom: 121px;
+  right: 85px;
+}
+
+/* enter arrow */
+.enterArrow {
+  width: 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 8px;
+}
+
+
+/* Explanations */
   .field_with_errors {
     padding: 1px;
     background-color: transparent;

@@ -1,7 +1,11 @@
       <div class="button-div">
-      <div class="col s8">
+      <div class="col s8 offset-s4">
       <% @degrees.each do |degree| %>
-      <%= link_to degree.degree_name, degree, :class => "waves-effect waves-light grey btn-large" %>
+      <%= link_to degree.degree_name, degree, :class => "waves-effect waves-light grey btn-large position-button" %>
       <% end %>
+      <a class="waves-effect waves-light grey btn-large enter">
+        <img src="assets/enter.png" class="enterArrow">
+        enter
+      </a>
       </div>
       </div>
