@@ -1,5 +1,6 @@
 class CollegeLevelsController < ApplicationController
-  before_action :set_college_level
+  #before_action :set_college_level
+  before_action :authenticate_admin!, except: [:index, :show]
 
   # GET /college_levels
   # GET /college_levels.json
@@ -11,6 +12,7 @@ class CollegeLevelsController < ApplicationController
   # GET /college_levels/1
   # GET /college_levels/1.json
   def show
+    @college_level = CollegeLevel.find(params[:id])
   end
 
   # GET /college_levels/new
@@ -55,6 +57,7 @@ class CollegeLevelsController < ApplicationController
   # DELETE /college_levels/1
   # DELETE /college_levels/1.json
   def destroy
+    @college_level = CollegeLevel.find(params[:id])
     @college_level.destroy
     respond_to do |format|
       format.html { redirect_to college_levels_url, notice: 'College level was successfully destroyed.' }

@@ -4,10 +4,14 @@
   <strong>College level:</strong>
   <%= @college_level.college_level_name%>
 </p>
+<p>
+  <strong>Degree:</strong>
+  <%= @college_level.degree.degree_name if @college_level.degree %>
+</p>
 
 
-    <%= @college_level.subject.each do |subject| %>
-    <%= link_to subject.subject_name, subjects_path(@subjects)%>
+    <% @college_level.subjects.each do |subject| %>
+    <%= link_to subject.subject_name, subject_path(subject)%>
 
     <% end %>
 

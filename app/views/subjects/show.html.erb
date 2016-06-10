@@ -10,5 +10,10 @@
   <%= @subject.description %>
 </p>
 
+<p>
+  <strong>Typ:</strong>
+  <%= @subject.type.type_name if @subject.type %>
+</p>
+
 <%= link_to 'Edit', edit_subject_path(@subject) %> |
 <%= link_to 'Back', subjects_path %>

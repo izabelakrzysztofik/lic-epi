@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get '/degrees/:id', to: 'degrees#show'
 
   devise_for :admins
   get 'home/index'

@@ -20,16 +20,16 @@
     <%= f.text_field :subject_name %>
   </div>
 
-  <div class="input-field multiple col s4 offset-s4">
+  <div class="input-field multiple col s6 offset-s4">
     <%= f.label :college_level %><br>
-    <%= f.select :college_level_id, options_for_select(CollegeLevel.all.map{|cl|[cl.full_name, cl.id]}), {},  class: "browser-default" %>
+    <%= f.select :college_level_id, options_for_select(CollegeLevel.all.map{|cl|[cl.full_name, cl.id]}), {} %>
   </div>
-  <div class="input-field col s4 offset-s4">
+  <div class="input-field col s6 offset-s4">
     <%= f.label :type %><br>
-    <%= f.select :type_id, options_for_select(Type.all.map{|cl|[cl.title_type, cl.id]}), {},  class: "browser-default"%>
+    <%= f.select :type_id, options_for_select(Type.all.map{|cl|[cl.title_type, cl.id]}), {}%>
   </div>
 
-  <div class="input-field col s4 offset-s4">
+  <div class="input-field col s6 offset-s4">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>

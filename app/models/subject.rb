@@ -1,6 +1,6 @@
 class Subject < ActiveRecord::Base
-  belongs_to :college_levels
-  belongs_to :degrees
-  belongs_to :types
+  belongs_to :college_level
+  belongs_to :degree
+  belongs_to :type
 
 end

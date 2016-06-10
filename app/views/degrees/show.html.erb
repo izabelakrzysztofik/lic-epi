@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Degree name:</strong>
@@ -6,7 +5,7 @@
 </p>
 
 <% @degree.college_levels.each do |level| %>
-<%= link_to level.college_level_name, subjects_path(@subject), :class => "waves-effect waves-light grey btn-large"%>
+<%= link_to level.college_level_name, subjects_path(college_level_id: level.id), :class => "waves-effect waves-light grey btn-large"%>
 
 <% end %>
 

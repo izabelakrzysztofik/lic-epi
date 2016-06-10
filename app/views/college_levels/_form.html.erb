@@ -13,8 +13,15 @@
 
   <div class="field">
     <%= f.label :college_level_name %><br>
-    <%= f.number_field :college_level_name %>
+    <%= f.text_field :college_level_name %>
   </div>
+
+  <div class="input-field col s6 offset-s4">
+    <%= f.label :degree_name %><br>
+    <%= f.select :degree_id, options_for_select(Degree.all.map{|cl|[cl.degree_name, cl.id]}), {} %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
