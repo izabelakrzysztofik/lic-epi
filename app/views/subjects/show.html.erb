@@ -1,12 +1,7 @@
-<p>
-  <strong>Subject name:</strong>
+<h1>
   <%= @subject.subject_name %>
-</p>
+</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @subject.description %>
-</p>
 
 <p>
   <strong>Typ:</strong>
@@ -18,7 +13,9 @@
 <%= link_to 'Back', subjects_path %>
 
 <div style="width:100%;height:1000px;background:white;">
-  <h1 id="namme" style="margin-top: 800px;">asd</h1>
+  <h2 id="namme" style="margin-top: 800px;">
+    <%= @subject.description %>
+  </h2>
 </div>
 
 <script>

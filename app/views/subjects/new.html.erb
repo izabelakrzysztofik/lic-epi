@@ -3,7 +3,11 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', subjects_path %>
+<%= link_to subjects_path, class: "waves-effect waves-light grey btn-large backspace" do %>
+  <img src="/assets/enter.png" class="enterArrow">
+  powrót
+<% end %>
+
 </div>
 
 <script>

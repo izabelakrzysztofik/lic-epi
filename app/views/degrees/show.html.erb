@@ -1,12 +1,18 @@
 
 <p>
-  <strong>Degree name:</strong>
   <%= @degree.degree_name %>
 </p>
 
 <% @degree.college_levels.each do |level| %>
-<%= link_to level.college_level_name, subjects_path(college_level_id: level.id), :class => "waves-effect waves-light grey btn-large"%>
+<%= link_to level.college_level_name, subjects_path(college_level_id: level.id), :class => "waves-effect waves-light grey btn-large position-button"%>
 
 <% end %>
+<a class="waves-effect waves-light grey btn-large enter">
+  <img src="/assets/enter.png" class="enterArrow">
+  pomoc
+</a>
 
-<%= link_to 'Back', home_index_path %>
+<%= link_to home_index_path, class: "waves-effect waves-light grey btn-large backspace" do %>
+  <img src="/assets/enter.png" class="enterArrow">
+  powrót
+<% end %>
