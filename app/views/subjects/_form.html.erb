@@ -29,13 +29,16 @@
     <%= f.select :type_id, options_for_select(Type.all.map{|cl|[cl.title_type, cl.id]}), {}%>
   </div>
 
-  <div class="input-field col s8 offset-s2">
+  <div class="input-field col s12">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.cktext_area :description %>
   </div>
 
 
-    <%= f.button 'Zapisz', :class => 'waves-effect waves-light grey btn-large enter' %>
+    <%= f.button 'Zapisz', class: "waves-effect waves-light grey btn-large enter" do %>
+    <img src="/assets/enter.png" class="enterArrow">
+    zapisz
+  <% end %>
 
 
   </div>
