@@ -1,13 +1,18 @@
+<div class="col s12">
 
-<p>
-  <%= @degree.degree_name %>
-</p>
+  <div class="col l6 offset-l6 s12">
+    <h1>
+      <%= @degree.degree_name %>
+    </h1>
+  </div>
 
-<% @degree.college_levels.each do |level| %>
-<%= link_to level.college_level_name, subjects_path(college_level_id: level.id), :class => "waves-effect waves-light grey btn-large position-button"%>
-
-<% end %>
-<a class="waves-effect waves-light grey btn-large enter">
+  <div class="col l6 offset-l4 s12" style="float: inherit;">
+    <% @degree.college_levels.each do |level| %>
+    <%= link_to level.college_level_name, subjects_path(college_level_id: level.id), :class => "waves-effect waves-light grey btn-large position-button"%>
+    <% end %>
+  </div>
+</div>
+<a class="waves-effect waves-light grey btn-large modal-trigger enter" href="#modal1">
   <img src="/assets/enter.png" class="enterArrow">
   pomoc
 </a>
@@ -16,3 +21,24 @@
   <img src="/assets/enter.png" class="enterArrow">
   powrót
 <% end %>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Jak rozpocząć?</h4><br><br>
+    <h6>Aby znaleźć przedmiot musisz najpierw wybrać, którego stopnia studia Cię interesują.<br><br> Masz do wyboru I Stopień
+  , czyli studia licencjackie oraz II Stopień, czyli magisterium. <br><br>Aby uzyskać pomoc w dalszych etapach,
+naciśnij przycisk "Enter".<br><br><br>
+Powodzenia!</h6>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>

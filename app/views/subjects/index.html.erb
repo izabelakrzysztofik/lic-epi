@@ -1,14 +1,13 @@
-<div class="col s8 offset-s4">
-
-<h1>Listing Subjects</h1>
-
-
+<div class="col s12" style="height: 90%">
+  <div class="col l6 offset-l6 s12 subject">
+    <h1>Wybierz przedmiot</h1>
     <% @subjects.each do |subject| %>
 
       <%= link_to subject.subject_name, subject %>
       </br>
 
     <% end %>
-<br>
+  </div>
 
-</div>
+
+  </div>

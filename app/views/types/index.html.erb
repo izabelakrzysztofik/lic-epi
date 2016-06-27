@@ -14,7 +14,6 @@
   <tbody>
     <% @types.each do |type| %>
       <tr>
-        <td><%= type.type_id %></td>
         <td><%= type.type_name %></td>
         <td><%= link_to 'Show', type %></td>
         <td><%= link_to 'Edit', edit_type_path(type) %></td>

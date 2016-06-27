@@ -17,11 +17,23 @@
 @import "materialize/components/color";
 @import "materialize/extras/nouislider";
 
+html {
+  background: url('tlo2.png');
+}
+.btn, .btn-large {
+    background: url('pusty.png') no-repeat center center scroll;
+    border-radius: 10px;
+}
+
 /* H1... */
-h1 {
-  padding: 0px 10px 0px 160px;
+#logo > div > div > div > h1 {
   color: white;
 }
+h3 {
+  padding: 0px 0px 0px 250px;
+  color: white;
+}
+
 /* Menu */
 nav {
   background: #f68d3c !important;
@@ -36,6 +48,12 @@ nav {
 }
 .nav-mobile {
   height: 45px;
+}
+#mobile-demo a {
+    color: #000;
+}
+nav ul a:visited {
+  color: #fff;
 }
 nav ul a {
     transition: background-color .3s;
@@ -64,6 +82,9 @@ input[type=email]:focus + label {
     color: #000;
         border-bottom: 1px solid white;
   }
+  label[for=subject_description]{
+    margin-top: -15px;
+  }
   /* label underline focus color */
 .input-field input[type=text]:focus ,
 input[type=password]:focus:not([readonly]),
@@ -91,10 +112,8 @@ input[type=email].valid {
 
 /* Logo*/
 #logo {
-    background-position: top center;
     background-size: cover;
-    background: url('logo10.png') no-repeat scroll;
-    padding: 10px 0 0 0;
+    background: url('logo10.png') no-repeat top center scroll;
 }
 
 /* Buttons */
@@ -107,42 +126,71 @@ input[type=email].valid {
     height: 64px;
     line-height: 76px;
 }
+a.btn {
+  margin: 10px;
+}
 a.btn:visited,
 a.btn-large:visited {
   color: #000;
 }
 a.btn:hover,
-a.btn-large:hover {
+a.btn-large:hover,
+button:hover{
   color: #c3c3c3;
 }
 .position-button {
   margin-left: 35px;
 }
+.modal-footer .btn{
+  margin-right: 30px !important;
+  margin-bottom: 30px !important;
+}
 #logo > div > div > a.waves-effect.waves-light.grey.btn-large {
   border: 1px ridge #bfbfbf;
   padding: 10px 10px 10px 40px;
 }
-#logo a {
+#logo a,
+#logo button {
     border: 1px ridge #bfbfbf;
     padding: 5px 10px 0px 50px;
     font-size: 15px;
 }
+.subject a{
+  border: none !important;
+  padding: 0 !important;
+  color: white;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+.subject a:hover{
+  background: none;
+  color: #555;
+}
 .button-div {
-  padding: 150px 0px 10px 100px;
+  padding: 250px 0px 10px 100px;
+}
+.button-div2 {
+  padding: 10px 0px 10px 250px;
 }
 .enter {
   width: 132px;
   text-align: right;
   position: fixed;
   bottom: 121px;
-  right: 85px;
+  right: 30px;
 }
 .backspace {
   width: 132px;
   text-align: right;
   position: fixed;
-  top: 200px;
-  right: 85px;
+  top: 181px;
+  right: 30px;
+}
+.menu-ham {
+  width: 35px;
+  margin: 6px;
 }
 
 /* enter arrow */
@@ -152,7 +200,9 @@ a.btn-large:hover {
   bottom: 15px;
   left: 8px;
 }
-
+.button-collapse:hover {
+  background: transparent;
+}
 
 /* Explanations */
   .field_with_errors {
@@ -192,7 +242,32 @@ a.btn-large:hover {
   }
 
 @media only screen and (min-width: 601px) {
-.navbar-fixed {
-    height: 45px;
+  .navbar-fixed {
+      height: 45px;
+  }
 }
+//TABLETY
+@media only screen
+and (max-width: 992px)
+and (min-width : 601px) {
+  .enter {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  #logo{
+    background: grey;
+  }
+}
+//KOMÓRKI
+@media only screen
+and (max-width: 600px){
+  .enter {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  #logo{
+    background: grey;
+  }
 }

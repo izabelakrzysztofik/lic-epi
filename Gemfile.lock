@@ -173,7 +173,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  ckeditor
+  ckeditor (~> 4.1, >= 4.1.6)
   coffee-rails (~> 4.1.0)
   devise
   jbuilder (~> 2.0)

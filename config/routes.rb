@@ -13,6 +13,15 @@ Rails.application.routes.draw do
   get "home/admin", :path => "admin"
   post "home/admin"
 
+  get "home/start", :path => "start"
+  post "home/start"
+
+  get "home/info", :path => "info"
+  post "home/info"
+
+  get "home/contact", :path => "contact"
+  post "home/contact"
+
   root 'home#index'
 
   devise_scope :admin do

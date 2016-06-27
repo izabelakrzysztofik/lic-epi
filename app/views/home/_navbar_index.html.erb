@@ -1,19 +1,40 @@
 <div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Start</a></li>
-        <li><a href="badges.html">Kontakt</a></li>
-        <li><a href="collapsible.html">Informacje</a></li>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><img class="menu-ham" src="/assets/menu.png"></a>
+      <ul class="left hide-on-med-and-down">
+        <li><%= link_to 'Start', home_start_path %>
+        </li>
+        <li><%= link_to 'Kontakt', home_contact_path %></li>
+        <li><%= link_to 'Informacje', home_info_path %></li>
       </ul>
 
 
       <% if admin_signed_in? %>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down">
         <li>
           <%= link_to 'Dodaj przedmiot', new_subject_path %>
         </li>
+        <li>
+          <%= link_to 'Wyloguj się', new_subject_path %>
+        </li>
+      </ul>
       <% end %>
+
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to 'Start', home_start_path %></li>
+        <li><%= link_to 'Kontakt', home_contact_path %></li>
+        <li><%= link_to 'Informacje', home_info_path %></li>
+        <% if admin_signed_in? %>
+          <li>
+            <%= link_to 'Dodaj przedmiot', new_subject_path %>
+          </li>
+          <li>
+            <%= link_to 'Wyloguj się', new_subject_path %>
+          </li>
+
+        <% end %>
       </ul>
     </div>
   </nav>

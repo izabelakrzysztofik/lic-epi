@@ -1,10 +1,10 @@
-<div class="col s8 offset-s4">
-<h1>New Subject</h1>
+<div class="col l12">
+<h1 class="col l6 offset-l6 s12">New Subject</h1>
 
 <%= render 'form' %>
 
 <%= link_to subjects_path, class: "waves-effect waves-light grey btn-large backspace" do %>
-  <img src="/assets/enter.png" class="enterArrow">
+  <img src="/assets/backspace.png" class="enterArrow">
   powrót
 <% end %>
 
@@ -13,5 +13,10 @@
 <script>
 $(document).ready(function() {
     $('select').material_select();
+    $('#subject_type_id').change(function() {
+        $('html, body').animate({
+            scrollTop: $("#desc").offset().top
+        }, 1000);
+    });
   });
 </script>

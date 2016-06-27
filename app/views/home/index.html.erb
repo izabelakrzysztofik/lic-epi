@@ -1,29 +1,59 @@
-      <div class="button-div">
-      <div class="col s8 offset-s4">
-      <% @degrees.each do |degree| %>
-      <%= link_to degree.degree_name, degree, :class => "waves-effect waves-light grey btn-large position-button" %>
-      <% end %>
-      <a class="waves-effect waves-light grey btn-large modal-trigger enter" href="#modal1">
-        <img src="/assets/enter.png" class="enterArrow">
-        enter
-      </a>
-
+    <div class="col s12 valign-wrapper" style="height: 90%">
+      <div class="col l8 offset-l4 s12 valign">
+        <% @degrees.each do |degree| %>
+          <%= link_to degree.degree_name, degree, :class => "waves-effect waves-light grey btn-large position-button" %>
+        <% end %>
+        <a class="waves-effect waves-light grey btn-large modal-trigger enter" href="#modal1">
+          <img src="/assets/enter.png" class="enterArrow">
+          enter
+        </a>
       </div>
-      </div>
+    </div>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+
+    <div class="col s12" style="background:white; margin-bottom: 100px;">
+      <div class="col s10 offset-s1 center-align">
+        <h2 id="namme" style="color:#000; margin: 0;padding: 30px 0">
+          Aplikacja dla kandydatów na studia Elektroniczne Przetwarzanie Infromacji
+        </h2>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+
+    <div class="col s8 offset-s2" style="background: white; color: black; margin-bottom: 100px;">
+      <p>
+
+        INSTRUKCJA
+
+        Autorem niniejszego serwisu jest Izabela Krzysztofik. Serwis ten stanowi integralną część pracy licencjackiej
+        (kierunek: Elektroniczne Przetwarzanie Informacji), przygotowanej pod kierunkiem dr. hab. Grzegorza Bilińskiego, prof. ASP,
+        na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.
+
+      </p>
     </div>
-  </div>
-<script>
-$(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-       </script>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Jak rozpocząć?</h4><br><br>
+        <h6>
+          Aby znaleźć przedmiot musisz najpierw wybrać, którego stopnia studia Cię interesują.<br><br> Masz do wyboru I Stopień
+          , czyli studia licencjackie oraz II Stopień, czyli magisterium. <br><br>Aby uzyskać pomoc w dalszych etapach,
+          naciśnij przycisk "Enter".<br><br><br>
+          Powodzenia!
+        </h6>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn">
+          Rozpocznij
+        </a>
+      </div>
+    </div>
+
+
+    <script>
+      $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+      });
+    </script>
